@@ -53,6 +53,7 @@ use MageKeeper\BracketsChecker\Validator\BracketsValidator;
 
 $expression = '(100 - 20) / 2';
 
+/** @var MageKeeper\BracketsChecker\Validator\BracketsValidatorInterface $validator */
 $validator = new BracketsValidator();
 
 if($validator->validate($expression)) {
@@ -60,7 +61,16 @@ if($validator->validate($expression)) {
 } else {
     //do something if invalid
 }
+
 ``` 
+If you need added custom brackets like "#", please usage next method:
+
+```php
+
+/** @var MageKeeper\BracketsChecker\Validator\CustomBracketsInterface $validator */
+$validator->addBrackets('#', '#')
+
+```
 
 Unit Tests
 ----------
