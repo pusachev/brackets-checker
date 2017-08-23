@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__."/../vendor/autoload.php";
+
+use Symfony\Component\Console\Application;
+
+use MageKeeper\BracketsChecker\Console\Command\CheckerCommand;
+use MageKeeper\BracketsChecker\Validator\BracketsValidator;
+
+$application = new Application();
+
+$application->add(new CheckerCommand(new BracketsValidator()));
+
+$application->run();

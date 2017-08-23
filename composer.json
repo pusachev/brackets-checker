@@ -1,0 +1,23 @@
+{
+    "name": "magekeeper/brackets-checker",
+    "description": "Check that's brackets is correct from input line",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Pavel Usachev",
+            "email": "webcodekeeper@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "": "src/" }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0.0",
+        "symfony/console": "^3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.3"
+    }
+}
